@@ -1,0 +1,12 @@
+body{background-image: url('000054290008.jpg');
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+     background-size: cover;}
+img{
+   margin-left: auto;
+    margin-right: auto;
+    margin-top: 150px;
+    margin-bottom: 100px;
+    display: block;
+    
+}

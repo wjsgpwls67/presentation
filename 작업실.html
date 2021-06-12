@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <title>혜진의 작업실</title>
+    <link rel="stylesheet" href="작업실css.css" />
+</head>
+<body>
+<div >
+    <img src="혜진작업실.jpg" usemap="#image-map">
+</div>
+
+<map name="image-map">
+    <area target="" alt="파일1" title="파일1" href="파일1.html" coords="328,222,338,454,650,458,659,234" shape="poly">
+    <area target="" alt="스케치" title="스케치" href="스케치.html" coords="226,367,317,602,349,634,324,661,346,710,270,774,295,795,281,836,263,843,237,798,205,675,149,600,129,590,124,658,60,577,2,542,-1,361,63,361" shape="poly">
+    <area target="" alt="재료" title="재료" href="재료.html" coords="622,861,627,873,717,944,793,920,794,906,694,840" shape="poly">
+    <area target="" alt="작가노트" title="작가노트" href="작가노트.html" coords="477,84,480,180,543,183,544,89" shape="poly">
+    <area target="" alt="작업" title="작업" href="작업.html" coords="863,1012,1005,1011,1004,650,886,577,774,850" shape="poly">
+</map>
+<script>
+    window.onload = function (){
+        var IMageMap = function (map, img) {
+            var n,
+                areas= map.getElementsByTagName('area'),
+                len = areas.length,
+                coords = [],
+                previousWidth = 3024;
+            for (n = 0; n < len; n++) {
+                coords[n] = areas[n].coords.split(',');
+            }
+            this.resize = function() {
+                var n, m, clen,
+                    x = img.offsetWidth / previousWidth;
+                for (n = 0; n < lent; n++) {
+                    clen =coords[n].length;
+                    for (m = 0; m < clen; m++) {
+                     coords[n][m] *= x;
+                    }
+                    areas[n].coords = coords[n].join(',');
+                }
+                previousWidth = document.body.clientWidth;
+                return true;
+            };
+            window.onresize = this.resize;
+        },
+        imageMap = new ImageMap(document.getElementById('img_Map'), document.getElementById('img_link'));
+    ById('img_link');
+        imageMap.resize();
+        return;
+    }
+</map>
+
+<audio src="Feels-Patrick Patrikios.mp3" controls="controls"></audio>
+</body>
+</html>

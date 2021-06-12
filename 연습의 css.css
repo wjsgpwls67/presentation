@@ -1,0 +1,24 @@
+body{background-color: #b3f2a1
+    
+}
+
+img{ 
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 200px;
+    margin-bottom: 100px;
+    display: block;
+    position:relative; 
+}
+h1{color:white;
+    font-size: 130px;
+    font-family: 'Gothic A1', sans-serif;
+    -webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: black;
+    margin-top: 10px;
+    margin-bottom: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    position:absolute;
+}
+
